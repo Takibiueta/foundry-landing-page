@@ -1,26 +1,29 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-primary: #1A2B3C;
+  --color-primary-light: #2C4A62;
+  --color-accent: #D4602A;
+  --color-accent-light: #E8844E;
+  --color-bg: #F5F3F0;
+  --color-bg-dark: #E8E4DF;
+  --color-text: #2D2D2D;
+  --color-text-light: #6B6B6B;
+  --color-white: #FFFFFF;
+
+  /* Fonts */
+  --font-sans: var(--font-noto-sans-jp), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-noto-serif-jp), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: var(--font-inter), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  
+  /* Extend spacing or other utilities if needed here */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Custom Base Styles */
+@layer base {
+  body {
+    @apply bg-bg text-text antialiased;
+    font-feature-settings: "palt";
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
