@@ -35,6 +35,11 @@ export function Footer() {
                         </h3>
                         <ul className="space-y-3">
                             <li>
+                                <Link href="/about" className="text-sm hover:text-accent transition-colors">
+                                    会社情報
+                                </Link>
+                            </li>
+                            <li>
                                 <Link href="/strength" className="text-sm hover:text-accent transition-colors">
                                     選ばれる理由
                                 </Link>
@@ -45,13 +50,13 @@ export function Footer() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/company" className="text-sm hover:text-accent transition-colors">
-                                    会社案内
+                                <Link href="/recruit" className="text-sm hover:text-accent transition-colors">
+                                    採用情報
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/recruit" className="text-sm hover:text-accent transition-colors">
-                                    採用情報
+                                <Link href="/contact" className="text-sm hover:text-accent transition-colors">
+                                    お問い合わせ
                                 </Link>
                             </li>
                         </ul>

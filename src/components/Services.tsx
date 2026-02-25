@@ -1,22 +1,26 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const services = [
     {
         name: "鋳造事業 (FC/FCD・ステンレス)",
         desc: "各種鋳物（FC・FCD）からステンレス鋳物まで、高品質な素材供給を実現します。",
-        image: "bg-gray-300",
+        image: "/images/casting-pouring.jpg",
+        alt: "鋳造 注湯機",
     },
     {
         name: "機械部品加工",
         desc: "鋳造品の仕上げ加工から精密部品の製作まで、一貫した加工体制を整えています。",
-        image: "bg-gray-400",
+        image: "/images/machining-nvx5060.jpg",
+        alt: "DMG MORI NVX 5060 マシニングセンタ",
     },
     {
         name: "総合建設・鉄骨工事",
         desc: "建築基礎から鉄骨構造物の製作・施工まで、地域のインフラを支えます。",
-        image: "bg-gray-500",
+        image: "/images/casting-hand-molding.jpg",
+        alt: "鋳造 手込め造型",
     },
 ];
 
@@ -48,11 +52,15 @@ export function Services() {
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1, duration: 0.6 }}
                         >
-                            {/* Image Placeholder */}
-                            <div className={`aspect-[3/4] ${item.image} transition-transform duration-700 group-hover:scale-110 relative`}>
-                                <div className="absolute inset-0 flex items-center justify-center text-white/50 font-bold text-2xl">
-                                    Image
-                                </div>
+                            {/* Photo */}
+                            <div className="aspect-[3/4] relative overflow-hidden">
+                                <Image
+                                    src={item.image}
+                                    alt={item.alt}
+                                    fill
+                                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                    sizes="(max-width: 768px) 100vw, 33vw"
+                                />
                             </div>
 
                             {/* Overlay */}

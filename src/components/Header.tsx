@@ -6,9 +6,9 @@ import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navigation = [
+    { name: "会社情報", href: "/about" },
     { name: "選ばれる理由", href: "/strength" },
     { name: "技術・設備", href: "/technology" },
-    { name: "会社案内", href: "/company" },
     { name: "採用情報", href: "/recruit" },
 ];
 

@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP, Noto_Serif_JP, Inter } from "next/font/google";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 import "./globals.css";
 
 const notoSansJP = Noto_Sans_JP({
@@ -36,9 +34,7 @@ export default function RootLayout({
       <body
         className={`${notoSansJP.variable} ${notoSerifJP.variable} ${inter.variable} antialiased bg-bg text-text`}
       >
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        {children}
       </body>
     </html>
   );
